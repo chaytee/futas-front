@@ -1,0 +1,13 @@
+setup:
+  config:
+    NODE_ENV: production
+
+build:
+  docker:
+    web: Dockerfile
+  config:
+    WORKDIR: app
+    API_URL: "https://futasu-v1-api.herokuapp.com"
+run:
+  #本番用
+  web: yarn run start

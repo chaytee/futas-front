@@ -13,3 +13,11 @@ ENV HOME=/${WORKDIR} \
 WORKDIR ${HOME}
 
 EXPOSE ${CONTAINER_PORT}
+
+#herokuコンテナにパッケージインストール
+COPY package*.json ./
+RUN yarn install
+#コンテナにNuxtプロジェクトをコピー
+COPY . ./
+#本番環境用にビルド
+RUN yarn run build
