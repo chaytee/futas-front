@@ -75,7 +75,7 @@ export default {
   },
   mounted() {
     /*ws://localhost:3000/cable*/
-    const cable = ActionCable.createConsumer("ws://futasu-v1-api.herokuapp.com/cable");
+    const cable = ActionCable.createConsumer("wss://futasu-v1-api.herokuapp.com/cable");
     this.messageChannel = cable.subscriptions.create("RoomChannel", {
       connected: () => {
         this.getMessages().then(() => {
