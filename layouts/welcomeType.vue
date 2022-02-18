@@ -17,11 +17,11 @@ export default {
 </script>
 <style lang="scss">
   #container.welcome-type {
-    height: calc(100vh - 60px);
+    height: calc(100% - 50px);
     min-height: auto;
 
     @include ta {
-      height: calc(100vh - 45px);
+      height: calc(100% - 35px);
     }
   }
 </style>

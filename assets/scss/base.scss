@@ -69,6 +69,7 @@ a:active, a:hover {
   フォントサイズ
 --------------------------------------------------*/
 html {
+  height: 100%;
 	font-size: 62.5%;/* ルートのフォントサイズを10px設定 */
 }
 body {
@@ -177,9 +178,12 @@ body {
 	text-align: left;
 	line-height: 1.6;
 }
+#__nuxt, #__layout {
+  height: 100%;
+}
 .wrap {
   width: 100vw;
-  min-height: 100vh;
+  height: 100%;
 }
 img {
 	max-width: 100%;
@@ -192,7 +196,6 @@ img {
     margin: auto;
   }
   #container {
-    min-height: 100vh;
     box-sizing: border-box;
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <section id="welcome" class="hero">
+  <section id="welcome">
     <div class="hero__bg">
       <div class="hero__wrap">
         <div class="hero__in">
@@ -11,10 +11,10 @@
             <LoginForm @redirectToRelationship="redirectToRelationship" />
             <SignUp @redirectToRelationship="redirectToRelationship" />
           </div>
-          <div class="hero__img cen">
+        </div>
+        <div class="hero__img cen">
             <img src="~/assets/img/title_img.png" alt="" />
           </div>
-        </div>
       </div>
       <div class="item01 cen">
         <img src="~/assets/img/title_item01.png" alt="" />
@@ -47,16 +47,14 @@ export default {
 
 <style lang="scss">
 #welcome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
   background-color: #fff;
 
   .hero__bg {
     box-sizing: border-box;
     position: relative;
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -65,9 +63,6 @@ export default {
     align-items: flex-end;
     position: relative;
 
-    @include ta {
-      height: calc(100vh - 45px);
-    }
     &::before {
       content: "";
       width: 100%;
@@ -123,8 +118,8 @@ export default {
     }
   }
   .hero__wrap {
+    height: 100%;
     box-sizing: border-box;
-    padding-top: 100px;
     margin: 0 auto;
     align-self: flex-end;
     position: relative;
@@ -134,10 +129,15 @@ export default {
       max-width: 1220px;
     }
     @include ta {
-      padding-top: 0;
       margin: auto;
       align-self:auto;
     }
+  }
+  .hero__in {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    height: 100%;
   }
   .hero__title {
     margin-bottom: 20px;
@@ -155,18 +155,19 @@ export default {
     }
   }
   .hero__img {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     z-index: 4;
   }
   .hero__box {
     width: 400px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     z-index: 5;
 
     @include ta {
       width: 90%;
-      margin: auto;
     }
   }
 
