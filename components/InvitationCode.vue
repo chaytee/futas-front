@@ -54,8 +54,8 @@ export default {
           `;
             //return window.alert(errorMessage);
           }
-          //this.$router.push("/");
-          console.log(params);
+          this.$router.push("/");
+          // console.log(params);
         })
         .catch((error) => {
           this.error = "合言葉を発行できませんでした";
