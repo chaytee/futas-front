@@ -169,10 +169,17 @@ h2 {
 /*--------------------------------------------------
   コンテナ
 --------------------------------------------------*/
+body {
+  height: 100%;
+}
 #container {
 	overflow: hidden;
 	text-align: left;
 	line-height: 1.6;
+}
+.wrap {
+  width: 100vw;
+  min-height: 100vh;
 }
 img {
 	max-width: 100%;
@@ -180,17 +187,6 @@ img {
 }
 /*PC*/
 @media print, screen and (min-width:1150px) {
-	body {
-		height: 100%;
-	}
-	body > .wrap {
-		height: auto;
-		min-height: 100%;
-	}
-  .wrap {
-    width: 100vw;
-    min-height: 100vh;
-  }
   #container.container {
     max-width: 1000px;
     margin: auto;

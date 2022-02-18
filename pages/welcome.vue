@@ -56,6 +56,7 @@ export default {
   .hero__bg {
     position: relative;
     width: 100vw;
+    height: 100vh;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -123,7 +124,6 @@ export default {
   .hero__wrap {
     box-sizing: border-box;
     padding-top: 100px;
-    padding-bottom: 60px;
     margin: 0 auto;
     align-self: flex-end;
     position: relative;
@@ -134,7 +134,6 @@ export default {
     }
     @include ta {
       padding-top: 50px;
-      padding-bottom: 50px;
     }
   }
   .hero__title {

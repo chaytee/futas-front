@@ -1,5 +1,7 @@
 .container {
   padding-top: 100px;
+  padding-bottom: 60px;
+  height: calc(100vh - 60px);
 }
 .container p {
   font-size: 95%;
@@ -291,30 +293,26 @@
   padding: 0;
   position: relative;
   z-index: 99;
+  min-height: 60px;
 }
 .copyright {
   color: #fff;
   line-height: 60px;
   font-size: 14px;
 }
-@media screen and (min-width: 1150px) {
-  .container {
-    padding-bottom: 60px;
-  }
-  #footer  {
-    min-height: 60px;
-    margin-top: -60px;
-  }
-}
 @media only screen and (max-width: 768px) {
   .container {
     padding-top: 55px;
     padding-left: 20px;
     padding-right: 20px;
-
+    padding-bottom: 45px;
+    height: calc(100vh - 45px);
   }
   .section-title {
     font-size: 18px;
+  }
+  #footer {
+    min-height: 45px;
   }
   .copyright {
     font-size: 12px;

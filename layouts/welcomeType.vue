@@ -15,3 +15,12 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .welcome-type {
+    height: calc(100vh - 60px);
+
+    @include ta {
+      height: calc(100vh - 45px);
+    }
+  }
+</style>
