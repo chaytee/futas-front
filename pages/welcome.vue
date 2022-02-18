@@ -89,10 +89,8 @@ export default {
       }
     }
     @include sm {
-      top: 30px;
-      left: 15px;
       img {
-        max-width: 60px;
+        max-width: 70px;
       }
     }
   }
@@ -105,15 +103,16 @@ export default {
       max-width: 240px;
     }
     @include ta {
-      top: 20px;
+      top: 10%;
 
       img {
         max-width: 170px;
       }
     }
     @include sm {
+      top: 12%;
       img {
-        max-width: 70px;
+        max-width: 100px;
       }
     }
   }
@@ -150,7 +149,7 @@ export default {
         max-height: 140px;
       }
       @include sm {
-        max-height: 70px;
+        padding: 0 10px;
       }
     }
   }

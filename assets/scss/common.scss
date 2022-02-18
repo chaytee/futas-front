@@ -112,6 +112,13 @@
       left: calc( 50% - 190px);
       background: url(~/assets/img/time_over.png) no-repeat center / 100% auto;
       z-index: 3;
+
+      @include sm {
+        width: 280px;
+        height: 74px;
+        top: calc(50% - 37px);
+        left: calc(50% - 140px);
+      }
       }
     }
     &__in {
