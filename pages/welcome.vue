@@ -134,7 +134,9 @@ export default {
       max-width: 1220px;
     }
     @include ta {
-      padding-top: 50px;
+      padding-top: 0;
+      margin: auto;
+      align-self:auto;
     }
   }
   .hero__title {
