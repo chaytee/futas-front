@@ -16,8 +16,9 @@ export default {
 }
 </script>
 <style lang="scss">
-  .welcome-type {
+  #container.welcome-type {
     height: calc(100vh - 60px);
+    min-height: auto;
 
     @include ta {
       height: calc(100vh - 45px);

@@ -302,6 +302,7 @@
 }
 @media only screen and (max-width: 768px) {
   .container {
+    box-sizing: border-box;
     padding-top: 55px;
     padding-left: 20px;
     padding-right: 20px;

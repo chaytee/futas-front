@@ -47,24 +47,27 @@ export default {
 
 <style lang="scss">
 #welcome {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
 
   .hero__bg {
+    box-sizing: border-box;
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
+
+    @include ta {
+      height: calc(100vh - 45px);
+    }
     &::before {
       content: "";
       width: 100%;
@@ -91,14 +94,12 @@ export default {
       }
     }
     @include sm {
-    top: 30px;
-    left: 15px;
+      top: 30px;
+      left: 15px;
       img {
         max-width: 60px;
       }
     }
-
-
   }
   .item02 {
     position: absolute;
@@ -161,10 +162,10 @@ export default {
     position: relative;
     z-index: 5;
 
-      @include ta {
-        width: 90%;
-        margin: auto;
-      }
+    @include ta {
+      width: 90%;
+      margin: auto;
+    }
   }
 
   .change-form {
