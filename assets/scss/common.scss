@@ -259,7 +259,15 @@
     background-image: url(~/assets/img/icon02.png);
   }
 }
-
+/* chat form */
+.chat-form {
+  background-color: $wifeColor;
+}
+.husband {
+  .chat-form {
+    background-color: $husbandColor;
+  }
+}
 /* ページ別 */
 .welcome__title {
   font-size: 110%;

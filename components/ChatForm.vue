@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-form wife">
+  <div class="chat-form">
     <div class="chat-form__in">
       <form class="chat-form__form">
         <div class="priority-box">
@@ -76,28 +76,19 @@ export default {
 </script>
 <style scoped lang="scss">
 .chat-form {
-  padding: 20px 0;
+  padding: 20px;
   box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
   @include ta {
-    padding: 15px 0;
+    padding: 15px;
   }
-  @include sm {
-    min-height: 226px;
-  }
-
-  &__in {
-    padding: 20px;
-    background-color: #fff;
-    box-sizing: border-box;
-
     @include sm {
-      width: 100%;
-      height: 226px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: 9;
-    }
+    width: 100%;
+    height: 226px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
   }
 
   .priority-box {
