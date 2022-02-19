@@ -51,6 +51,7 @@ export default {
 </script>
 <style lang="scss">
 .mission {
+
   @include sm {
     .section-title {
       display: none;
