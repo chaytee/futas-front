@@ -264,6 +264,14 @@
 .welcome__title {
   font-size: 110%;
 }
+#welcome .modal-content .box {
+  max-width: 450px;
+  margin: auto;
+    @include ta {
+      max-width: none;
+      width: 90%;
+    }
+}
 .form__box {
   max-width: 300px;
   margin: auto;
