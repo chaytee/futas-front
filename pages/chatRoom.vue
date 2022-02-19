@@ -1,8 +1,7 @@
 <template>
   <section class="section-pt">
     <h2 class="section-title">chatroom</h2>
-    <ChatWindow
-      @connectCable="connectCable"
+    <ChatWindow @connectCable="connectCable"
       :messages="formattedMessages"
       ref="chatWindow"
     />
@@ -11,7 +10,7 @@
 </template>
 
 <script>
-import ChatWindow from "../components/ChatWindow .vue";
+import ChatWindow from "../components/ChatWindow.vue";
 import ChatForm from "../components/ChatForm.vue";
 //import ActionCable from "actioncable";
 import { formatDistanceToNow } from "date-fns";
