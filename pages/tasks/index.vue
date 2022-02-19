@@ -56,11 +56,6 @@ export default {
     .section-title {
       display: none;
     }
-    .sq {
-      margin-top: 15px;
-      overflow-y: scroll;
-      max-height: 432px;
-    }
   }
 }
 </style>

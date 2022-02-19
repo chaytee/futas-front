@@ -26,12 +26,14 @@
         </div>
         <div class="global-menu">
           <ul class="menu-list columns is-mobile mb-0">
-            <li class="column" v-bind:class="{ menu_none: menuNone }">
-              <nuxt-link to="/"><span class="menu_title">HOME</span></nuxt-link>
+            <li class="column" v-bind:class="{ menu_none: menuNone }" v-for="(menuItem, index) in MENU" :key="index" >
+              <nuxt-link :to="`/${menuItem.path}`" v-text="menuItem.name" class="menu_title" @click.native.prevent="trigger"
+                event="" />
+              <!-- <nuxt-link to="/"><span class="menu_title">HOME</span></nuxt-link> -->
             </li>
-            <li class="column" v-bind:class="{ menu_none: menuNone }">
+            <!-- <li class="column" v-bind:class="{ menu_none: menuNone }">
               <nuxt-link to="/chatroom"
-                ><span class="menu_title">chatroom</span></nuxt-link
+                @click.native.prevent="trigger"><span class="menu_title">chatroom</span></nuxt-link
               >
             </li>
             <li class="column">
@@ -40,7 +42,7 @@
                   ><span class="menu_title">Setting</span></span
                 ></nuxt-link
               >
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -55,6 +57,29 @@
   </div>
 </template>
 <script>
+const MENU = [
+  {
+    id: 1,
+    name: 'HOME',
+    path: '',
+    image: '',
+    className: '',
+  },
+  {
+    id: 2,
+    name: 'Chatroom',
+    path: 'chatroom',
+    image: '',
+    className: '',
+  },
+  {
+    id: 3,
+    name: 'Setting',
+    path: 'relationship',
+    image: '',
+    className: '',
+  },
+]
 export default {
   data() {
     return {
@@ -63,6 +88,7 @@ export default {
       error: null,
       menuNone: false,
       isHamburger: false,
+      MENU,
     };
   },
   methods: {
@@ -79,6 +105,10 @@ export default {
     clickHamburger: function () {
       return (this.isHamburger = !this.isHamburger);
     },
+    trigger(){
+       this.isHamburger = false
+      this.$router.push({ path: event.target.pathname })
+    }
   },
   mounted() {
     if (localStorage.uid) {
@@ -87,6 +117,7 @@ export default {
     if (this.$auth.user.relationship_id === null) {
       return (this.menuNone = !this.menuNone);
     }
+
   },
 };
 </script>

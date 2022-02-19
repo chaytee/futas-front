@@ -298,9 +298,12 @@ export default {
     height: auto;
 
     &__link {
-      position: absolute;
-      top: -120px;
+      position: fixed;
       right: 0;
+      bottom: 186px;
+      width: 60px;
+      box-sizing: border-box;
+      padding: 3px 0;
       z-index: 9;
       min-width: 0;
       padding: 0;

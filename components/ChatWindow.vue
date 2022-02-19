@@ -63,11 +63,10 @@ export default {
   box-sizing: border-box;
   background: white;
   padding: 30px 20px;
-  border-bottom: 1px solid #eee;
   border-radius: 10px 10px 0 0;
 
   @include sm {
-    padding: 15px;
+    padding: 15px 0 0;
     height: calc(100% - 226px);
   }
 
@@ -79,6 +78,16 @@ export default {
     li {
       display: inline-block;
       clear: both;
+    }
+  }
+  .messages {
+    max-height: 400px;
+    overflow-y: scroll;
+
+   @include sm {
+     max-height: none;
+     overflow-y:auto;
+     padding-bottom: 200px;
     }
   }
 
@@ -184,10 +193,6 @@ export default {
     font-size: 10px;
     margin-bottom: 20px;
     margin-left: 4px;
-  }
-  .messages {
-    height: 300px;
-    overflow: auto;
   }
 }
 .husband {

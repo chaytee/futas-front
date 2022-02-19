@@ -25,7 +25,7 @@
         </div>
         <textarea
           class="textarea is-large"
-          rows="2"
+          rows="1"
           placeholder="メッセージ"
           v-model="message"
         ></textarea>
@@ -79,17 +79,20 @@ export default {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
   @include ta {
     padding: 15px;
   }
     @include sm {
     width: 100%;
-    height: 226px;
+    height: 200px;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 9;
+    margin-bottom: 0;
   }
+
 
   .priority-box {
     display: flex;
